@@ -1,51 +1,51 @@
 class filterScreen {
-  
+
   PImage filterScreen;
   PImage layer;
   filterScreen()
   {
-  
   }
-  
+
   void screenDisplay() {
-      filterScreen = loadImage("filterScreen.jpg");
-  filterScreen.resize(width, height);
-  image(filterScreen, 0, 0);
-  
-  layer = loadImage("group.JPEG");
-  layer.resize(width, 585);
-  image(layer, 0, 0);
+    filterScreen = loadImage("filterScreen.png");
+    filterScreen.resize(width, height);
+    image(filterScreen, 0, 0);
+
+    //layer = loadImage("group.JPEG");
+    //layer.resize(width, 585);
+    //image(layer, 0, 0);
   }
-    
+
   void displayRect()
   {
-    fill(0);
-    rect(75, 620, 60, 60);
-    rect(175,620, 60, 60);
-    rect(275,620, 60, 60);
-    rect(375,620, 60, 60);
-    rect(475,620, 60, 60);
-    rect(575,620, 60, 60);
-    
+    noStroke();
+    fill(#1E0A3B, 100);
+    rect(10, 610, 120, 80);
+    rect(150, 610, 120, 80);
+    rect(290, 610, 120, 80);
+    rect(430, 610, 120, 80);
+    rect(570, 610, 120, 80);
+    //rect(660,620, 120, 120);
+
     fill(#DBD3E8);
     textSize(20);
-    text("2", 100, 655);
-    text("3", 200, 655);
-    text("4", 300, 655);
-    text("5", 400, 655);
-    text("6", 500, 655);
-    text("7", 600, 655);
+    text("a b c d e", 25, 640);
+    text("f g h i j", 180, 640);
+    text("k", 345, 640);
+    text("m", 485, 640);
+    text("n", 625, 640);
     fill(#DBD3E8);
-    textSize(15);
-    text("Face", 80, 675);
-    text("Eye", 180, 675);
-    text("Paint", 280, 675);
-    text("Outline", 380, 675);
-    text("BW", 480, 675);
-    text("Filter", 580, 675);
+    textSize(20);
+    text("Face", 45, 670);
+    text("Eye", 195, 670);
+    text("Paint", 330, 670);
+    text("Static", 465, 670);
+    text("B & W", 605, 670);
+    textSize(10);
+    text("Press 1 for instructions, press x to exit", 230, height -5);
+
     //rectangles -black
   }
   //press key to try out the filters - start screen 
-  //on rectangle have the case numbers 
-  
+  //on rectangle have the case numbers
 }

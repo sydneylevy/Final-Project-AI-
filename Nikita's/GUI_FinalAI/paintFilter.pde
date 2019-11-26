@@ -1,28 +1,39 @@
 class paintFilter {
-  
-  PImage filterScreen;
-  PImage layer;
+
+  PImage picture1;
+  PImage picture2;
+  char num = 1;
+  float i = 0;
+
   paintFilter()
   {
-  
   }
-  
-  void paintDisplay() {
-      filterScreen = loadImage("filterScreen.jpg");
-  filterScreen.resize(width, height);
-  image(filterScreen, 0, 0);
-  
-  layer = loadImage("group.JPEG");
-  layer.resize(width, 585);
-  image(layer, 0, 0);
-  
-  fill(#DBD3E8);
-  textSize(40);
-  text("Paint Filter", 250, 650);
+
+  void paintSetup()
+  {
+    //size(700, 700);
+    picture1 = loadImage("flower.jpeg");
+    picture1.resize(width, 585);
+    noStroke();
   }
+
+  void keyPaint()
+  {
+    int i = 0;
+    while (i <= 55000) {
+      drawPaint();
+      i = i + 1 ;
+    }
+  }
+
+  void drawPaint() {
     
-  
-  //press key to try out the filters - start screen 
-  //on rectangle have the case numbers 
-  
+    int x = int(random(picture1.width));
+    int y = int(random(picture1.height));
+    color c = picture1.get(x, y);
+    fill(c, 128);
+    rect(x, y, random(3, 10), random(3, 10));
+    i++;
+
+  }
 }
